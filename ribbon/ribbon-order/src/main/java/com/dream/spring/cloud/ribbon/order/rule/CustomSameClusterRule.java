@@ -22,8 +22,8 @@ import java.util.List;
  * @description 同集群优先权重负载均衡策略
  */
 @Slf4j
-@Component
-public class CustomClusterRule extends AbstractLoadBalancerRule {
+//@Component
+public class CustomSameClusterRule extends AbstractLoadBalancerRule {
 
     @Autowired
     private NacosDiscoveryProperties nacosDiscoveryProperties;

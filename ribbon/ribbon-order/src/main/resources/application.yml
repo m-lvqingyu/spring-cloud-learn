@@ -10,6 +10,9 @@ spring:
         server-addr: localhost:8848
         # 集群名称
         cluster-name: BJ-SERVER
+        namespace: deca330d-ad01-4b04-9938-3b41221bc886
+        metadata:
+          current-version: v1
 # Ribbon开启饥饿记载模式，避免重启服务后第一次调用超时
 ribbon:
   eager-load:
@@ -25,4 +28,4 @@ ribbon:
 #   7) ZoneAvoidanceRule：符合判断server所在区域的性能和server的可用性选择服务
 ribbon-product:
   ribbon:
-    NFLoadBalancerRuleClassName: com.dream.spring.cloud.ribbon.order.rule.CustomClusterRule
+    NFLoadBalancerRuleClassName: com.dream.spring.cloud.ribbon.order.rule.CustomSameClusterVersionRule
